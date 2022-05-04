@@ -37,28 +37,22 @@ export default function BasicForm() {
               }}
               validationSchema={SignupSchema}
             >
-              {(values) => (
-                <Form>
-                  <TextField lable={"Name"} type="text" name="name" />
-                  <TextField lable={"Phone Number"} type="text" name="phone" />
-                  <TextField
-                    lable={"Password"}
-                    type="password"
-                    name="password"
-                  />
-                  <SelectField
-                    lable={"Select Game Name"}
-                    name="game"
-                    data={["Pubg", "Ludo"]}
-                  />
-                  <div className="my-2 text-danger">
-                    <ErrorMessage name="game" />
-                  </div>
-                  <button className="btn btn-primary btn-sm mb-3">
-                    Register
-                  </button>
-                </Form>
-              )}
+              <Form>
+                <TextField lable={"Name"} type="text" name="name" />
+                <TextField lable={"Phone Number"} type="text" name="phone" />
+                <TextField lable={"Password"} type="password" name="password" />
+                <SelectField
+                  lable={"Select Game Name"}
+                  name="game"
+                  data={["Pubg", "Ludo"]}
+                />
+                <div className="my-2 text-danger">
+                  <ErrorMessage name="game" />
+                </div>
+                <button className="btn btn-primary btn-sm mb-3">
+                  Register
+                </button>
+              </Form>
             </Formik>
           </div>
         </div>
